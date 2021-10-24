@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+go build -gcflags=-m crush.go &> log
+grep escapes log
+rm log
