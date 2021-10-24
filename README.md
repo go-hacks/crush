@@ -11,5 +11,5 @@ Benchmarked on Artix Linux(x64) inside a ramdisk.
 
 ./crush fileName
 
-Note: ./build dumps compilation information so you you can see what
+Note: ./build dumps compilation information so you can see what
 escapes to heap. Only values outside the core hasher should. 
