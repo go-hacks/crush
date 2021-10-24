@@ -45,7 +45,7 @@ func main () {
   //Initial state (sqrt(3))
   stateHex := "1c98c677de371c7d"
   stateBytes := make([]byte, stateByteCnt)
-	hex.Decode(stateBytes, []byte(stateHex))
+  hex.Decode(stateBytes, []byte(stateHex))
   state := binary.BigEndian.Uint64(stateBytes)
 
   //Buffer for reads into hasher
@@ -83,7 +83,7 @@ func main () {
 
   //Convert raw bytes back into hex string for printing
   hashHexBytes := make([]byte, hex.EncodedLen(len(stateBytes)))
-	hex.Encode(hashHexBytes, stateBytes)
+  hex.Encode(hashHexBytes, stateBytes)
   hashStr := fmt.Sprintf("%s", hashHexBytes)
 
   //Print output
