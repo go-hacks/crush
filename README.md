@@ -9,7 +9,7 @@ Benchmarked on Artix Linux(x64) inside a ramdisk.
 
 Build with
 ```
-chmod +x && ./build
+chmod +x build && ./build
 ```
 
 Run with
