@@ -92,7 +92,7 @@ func main () {
 	hashStr := fmt.Sprintf("%s", hashHexBytes)
 
 	//Print output
-	if hashStr == "b4bb4023dcbf444b" {
+	if hashStr == "34bb40235c3fc44b" {
 		os.Stderr.WriteString("Hash is the base state because the file has no bits!\n")
 		fmt.Printf("%s %s\n", hashHexBytes, os.Args[1])
 	} else {
@@ -119,13 +119,13 @@ func nlfsr (src []byte) []byte {
 			src[7] += dst[0]
 		}
 		src[0] ^= 255
-		dst[1] ^= 255
+		src[1] += 128
 		src[2] ^= 255
-		dst[3] ^= 255
+		src[3] += 128
 		src[4] ^= 255
-		dst[5] ^= 255
+		src[5] += 128
 		src[6] ^= 255
-		dst[7] ^= 255
+		src[7] += 128
 	}
 	return dst
 }
